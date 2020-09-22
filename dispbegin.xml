@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Dispatcher BeginInvoke</Title>
+      <Shortcut>dispbegin</Shortcut>
+      <Description>Dispatcher.BeginInvoke Lambda Syntax</Description>
+      <Author>Robert Bantele</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>code</ID>
+          <ToolTip>Your Code in a new Thread</ToolTip>
+          <Default>Code</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+			this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate() {
+				$code$
+			});
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

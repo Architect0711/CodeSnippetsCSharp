@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>TryCatch + Logging</Title>
+      <Shortcut>trylog</Shortcut>
+      <Description>Try Catch Block with Exception Logging</Description>
+      <Author>Robert Bantele</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>except</ID>
+          <ToolTip>Exception Variable Name</ToolTip>
+          <Default>ex</Default>
+        </Literal>
+        <Literal>
+          <ID>message</ID>
+          <ToolTip>Logging Message</ToolTip>
+          <Default>Message</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+        try
+        {
+        
+        }
+        catch(Exception ex)
+        {
+          log.Error(ex);
+        }
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
