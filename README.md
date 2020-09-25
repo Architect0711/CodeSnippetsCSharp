@@ -9,6 +9,5 @@ Code Snippets for C# in Visual Studio
 
 Use the *Delimiter* Attribute on the *Code* Tag to define a different Delimiter than the Default Value "$":
 
-<Code Language="csharp" Delimiter="~"><![CDATA[
-
-]]></Code>
+`<Code Language="csharp" Delimiter="~"><![CDATA[ Your Snippet with a $ Sign ]]></Code>
+`
