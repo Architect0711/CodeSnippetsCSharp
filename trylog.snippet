@@ -18,22 +18,20 @@
           <Default>ex</Default>
         </Literal>
         <Literal>
-          <ID>message</ID>
-          <ToolTip>Logging Message</ToolTip>
-          <Default>Message</Default>
+          <ID>code</ID>
+          <ToolTip>Your unsafe Code</ToolTip>
+          <Default>Code</Default>
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[
-        try
-        {
-        
-        }
-        catch(Exception ex)
-        {
-          log.Error(ex);
-        }
-        ]]>
+        <![CDATA[try
+{
+  $code$
+}
+catch(Exception ex)
+{
+  log.Error(ex);
+}]]>
       </Code>
     </Snippet>
   </CodeSnippet>

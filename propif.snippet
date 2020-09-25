@@ -24,25 +24,23 @@
         </Literal>
         <Literal>
           <ID>field</ID>
-          <ToolTip>The variable backing this property</ToolTip>
-          <Default>myVar</Default>
+          <ToolTip>The field backing this property</ToolTip>
+          <Default>myField</Default>
         </Literal>
       </Declarations>
       <Code Language="csharp">
         <![CDATA[private $type$ $field$;
-
-  public $type$ $property$
-  {
-    get { return $field$;}
-    set 
-    { 
-      if($field$ != value)
-      {
-        $field$ = value;
-      }
+public $type$ $property$
+{
+  get { return $field$; }
+  set 
+  { 
+    if($field$ != value)
+    {
+      $field$ = value;
     }
   }
-  $end$]]>
+}]]>
       </Code>
     </Snippet>
   </CodeSnippet>
