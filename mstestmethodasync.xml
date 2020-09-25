@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>MSTest TestMethod Async</Title>
+      <Shortcut>mstestmethodasync</Shortcut>
+      <Description>Create an asynchronous Method decorated with the TestMethod Attribute</Description>
+      <Author>Robert Bantele</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodname</ID>
+          <ToolTip>Meaningful Name for the Test</ToolTip>
+          <Default>Methodname</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[
+			[TestMethod]
+			public async Task $methodname$() 
+			{
+				// ---------- Arrange ----------
+				
+				// ------------ Act ------------
+				
+				// ---------- Assert -----------
+			}
+        ]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
