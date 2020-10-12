@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>NUnit TestCase Async</Title>
+      <Shortcut>nutestcaseasync</Shortcut>
+      <Description>Create an asynchronous Method decorated with an empty TestCase Attribute</Description>
+      <Author>Robert Bantele</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>methodname</ID>
+          <ToolTip>Meaningful Name for the Test</ToolTip>
+          <Default>Methodname</Default>
+        </Literal>
+        <Literal>
+          <ID>arguments</ID>
+          <ToolTip>Arguments for the Test</ToolTip>
+          <Default></Default>
+        </Literal>
+        <Literal>
+          <ID>data</ID>
+          <ToolTip>First set of Arguments</ToolTip>
+          <Default></Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[[TestCase($data$)]
+public async Task $methodname$($arguments$) 
+{
+	// ---------- Arrange ----------
+	$end$
+	
+	// ------------ Act ------------
+	
+	
+	// ---------- Assert -----------
+	
+	
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
