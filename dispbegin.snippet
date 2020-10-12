@@ -11,18 +11,11 @@
       </SnippetTypes>
     </Header>
     <Snippet>
-      <Declarations>
-        <Literal>
-          <ID>code</ID>
-          <ToolTip>Your Code in a new Thread</ToolTip>
-          <Default>Code</Default>
-        </Literal>
-      </Declarations>
       <Code Language="csharp">
         <![CDATA[this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate()
-{
-  $code$
-});]]>
+		{
+			$end$
+		});]]>
       </Code>
     </Snippet>
   </CodeSnippet>

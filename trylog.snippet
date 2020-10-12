@@ -17,21 +17,15 @@
           <ToolTip>Exception Variable Name</ToolTip>
           <Default>ex</Default>
         </Literal>
-        <Literal>
-          <ID>code</ID>
-          <ToolTip>Your unsafe Code</ToolTip>
-          <Default>Code</Default>
-        </Literal>
-      </Declarations>
       <Code Language="csharp">
         <![CDATA[try
-{
-  $code$
-}
-catch(Exception ex)
-{
-  log.Error(ex);
-}]]>
+		{
+			$end$
+		}
+		catch(Exception $except$)
+		{
+			log.Error($except$);
+		}]]>
       </Code>
     </Snippet>
   </CodeSnippet>
