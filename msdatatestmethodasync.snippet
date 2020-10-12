@@ -17,18 +17,31 @@
           <ToolTip>Meaningful Name for the Test</ToolTip>
           <Default>Methodname</Default>
         </Literal>
+        <Literal>
+          <ID>arguments</ID>
+          <ToolTip>Arguments for the Test</ToolTip>
+          <Default></Default>
+        </Literal>
+        <Literal>
+          <ID>data</ID>
+          <ToolTip>First set of Arguments</ToolTip>
+          <Default></Default>
+        </Literal>
       </Declarations>
       <Code Language="csharp">
         <![CDATA[[DataTestMethod]
-[DataRow()]
-public async Task $methodname$() 
+[DataRow($data$)]
+public async Task $methodname$($arguments$) 
 {
 	// ---------- Arrange ----------
-				
+	$end$
+	
 	// ------------ Act ------------
-				
+	
+	
 	// ---------- Assert -----------
-
+	
+	
 }]]>
       </Code>
     </Snippet>
