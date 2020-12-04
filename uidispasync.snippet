@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Dispatcher.RunAsync</Title>
+      <Shortcut>uidispasync</Shortcut>
+      <Description>Update a UI Element using Dispatcher.RunAsync</Description>
+      <Author>Robert Bantele</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>uielement</ID>
+          <ToolTip>UI Element, e.g. "MyTextBox"</ToolTip>
+          <Default>TextBox1</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[Task.Run(()	=>
+			{
+				$uielement$.Dispatcher.RunAsync(CoreDispatcherPriority.Normal
+				{
+					$uielement$.Text = "";
+				});
+			});
+		$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
