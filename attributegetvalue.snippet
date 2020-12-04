@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Attribute GetMethod</Title>
+      <Shortcut>attributegetmethod</Shortcut>
+      <Description>Create a Method that returns the value of an Attribute</Description>
+      <Author>Robert Bantele</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>returntype</ID>
+          <ToolTip>Type the get-method should return</ToolTip>
+          <Default>int</Default>
+        </Literal>
+        <Literal>
+          <ID>attributetype</ID>
+          <ToolTip>Type of the Attribute</ToolTip>
+          <Default>MyAttribute</Default>
+        </Literal>
+        <Literal>
+          <ID>methodname</ID>
+          <ToolTip>Meaningful Name for the Test</ToolTip>
+          <Default>Methodname</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[/// https://docs.microsoft.com/en-us/dotnet/standard/attributes/retrieving-information-stored-in-attributes
+public $returntype$ $methodname$()
+{
+    // Get instance of the attribute.
+    $attributetype$ MyAttribute =
+        ($attributetype$)Attribute.GetCustomAttribute(this.GetType(), typeof($attributetype$));
+
+    if (MyAttribute != null)
+    {
+        // The attribute was found.
+        $end$
+    }
+    throw new Exception();
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
