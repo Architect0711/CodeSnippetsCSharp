@@ -2,9 +2,9 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>MSTest TestClass</Title>
-			<Shortcut>mstestclassfull</Shortcut>
-			<Description>Create a Class decorated with the TestClass Attribute containing all possible MSTest TestMethods except Assembly methods</Description>
+			<Title>MSTest TestClass with Assembly methods</Title>
+			<Shortcut>mstestclassfullasm</Shortcut>
+			<Description>Create a Class decorated with the TestClass Attribute containing all possible MSTest TestMethods</Description>
 			<Author>Robert Bantele</Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
@@ -28,6 +28,12 @@
     public class $classname$
     {
         #region Initialize
+        [AssemblyInitialize]
+        public static void AssemblyInit(TestContext context)
+        {
+            // Executes once before the test run. (Optional)
+        }
+
         [ClassInitialize]
         public static void TestFixtureSetup(TestContext context)
         {
@@ -42,6 +48,12 @@
         #endregion
 
         #region Cleanup
+        [AssemblyCleanup]
+        public static void AssemblyCleanup()
+        {
+            // Executes once after the test run. (Optional)
+        }
+
         [ClassCleanup]
         public static void TestFixtureTearDown()
         {
